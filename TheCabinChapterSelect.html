@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>THE CABIN</title>
+
+<style type="text/css">
+canvas{
+border-width: 2px;
+border-style:solid;
+}
+img{
+display: none;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p{
+text-align: inherit;
+font-family: Georgia;
+font-size: 16px;
+}
+
+
+html {
+padding:0; 
+margin:0; 
+border:5px dashed gray;
+}
+
+body {
+height:100%; 
+padding:0; 
+margin:0; 
+border:0;
+border-width: 5px;
+border-style: double;
+border-color: Black;
+background-color: rgb(205,133,63);
+}
+</style>
+
+<script type ="text/javascript">
+
+var vcancas,vcon,vimg1; var cx=0; 
+function loadani(){
+    vcanvas=document.getElementById("canvas");
+	vcon=vcanvas.getContext("2d");
+	vimg1=document.getElementById("imgframe");
+	vcon.drawImage(vimg1,0,0,320,200);
+}
+
+
+</script>
+
+</head>
+
+<body onload="loadani()">
+<div align ="center">
+<h1>Chapter Select</h1>
+<br>
+<img id="imgframe" src="test3.png"/>
+
+	<canvas id="canvas" onclick="location.href='TheCabinChapter1Scene1.html'" width ="320" height="200" >
+	"This is not supported by this browser"
+	</canvas>
+	<p>Chapter 1 - PREPARATION FOR THE TRIP</p>
+	
+	<canvas id="canvas" onclick="location.href='TheCabinChapter2Scene1.html'" width ="320" height="200" >
+	"This is not supported by this browser"
+	</canvas>
+	<p>Chapter 2 - AT THE CABIN </p>
+	
+	<canvas id="canvas" onclick="location.href='TheCabinChapter3Scene1.html'" width ="320" height="200" >
+	"This is not supported by this browser"
+	</canvas>
+	<p>Chapter 3 - THE DISCOVERY</p>
+	
+	<canvas id="canvas" onclick="location.href='TheCabinChapter4Scene1.html'" width ="320" height="200" >
+	"This is not supported by this browser"
+	</canvas>
+	<p>Chapter 4 - TRYING TO ESCAPE</p>
+	
+	<canvas id="canvas" onclick="location.href='TheCabinChapter5Scene1.html'" width ="320" height="200" >
+	"This is not supported by this browser"
+	</canvas>
+	<p>Chapter 5 - THE SURVIVOR</p>
+	
+	
+</div>
+</body>
+</html>

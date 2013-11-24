@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>The Cabin</title>
+
+<style type="text/css">
+canvas{
+border-width: 2px;
+border-style:solid;
+}
+img{
+display: none;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p{
+text-align: inherit;
+font-family: Georgia;
+font-size: 16px;
+}
+
+
+html {
+padding:0; 
+margin:0; 
+border:5px dashed gray;
+}
+
+body {
+height:100%; 
+padding:0; 
+margin:0; 
+border:0;
+border-width: 5px;
+border-style: double;
+border-color: Black;
+background-color: rgb(205,133,63);
+}
+</style>
+
+<script type ="text/javascript">
+
+var vcanvas, vcon, vimg1, vimg2; var cx =0;
+function loadani(){
+	//alert('Loadani function...');
+	vcanvas = document.getElementById("anicanvas");
+	vcon = vcanvas.getContext("2d");
+	vimg1 = document.getElementById("basement");
+	vimg2 = document.getElementById("chapter2scene3");
+	vcon.drawImage(vimg1,0,0,640,480);
+	vcon.drawImage(vimg2,cx,0,200,250,200,200,200,250);
+	setInterval("animate()",1000);
+}
+var counter=0;var moveright = 0;
+function animate(){
+	if(counter<=6)counter++;else counter=0;
+	cx = counter*200; moveright = moveright + 10;
+	//if(iy<10) iy +=30; else iy-=30; 
+	vcon.drawImage(vimg1,0,0,640,480);
+	vcon.drawImage(vimg2,cx,0,200,250,200,200,200,250);
+}
+</script>
+</head>
+
+<body onload="loadani()">
+<div align="center">
+<h1>The Cabin</h1>
+<h2>CHAPTER 2</h2>
+<h3>Scene 3 - The Diary</h3>
+<canvas id="anicanvas" width="640" height="480"></canvas>
+<p>Dana to go down into the basement. She does and the rest of them follow. 
+There is a ton of really strange stuff down there. 
+Every one pickup a stuff Dana picks up a diary. Curt chooses a puzzle ball and tries to open it. 
+Jules likes a wedding dress and starts to put on the necklace that goes with it. 
+Marty is looking at a conch shell and Holden is mesmerized by a child's jewelry box that opens to reveal a dancing ballerina when, all of a sudden...
+...Dana says "Hey guys! Listen to this.
+
+Everyone else puts down what they were looking at and walks over to her. 
+The diary belonged to a young girl who was brutally beaten by her father. 
+There is something about how they will all return once someone reads some Latin words at the end of the diary. 
+Marty says they shouldn't read it. He hears a voice tell Dana to read it. 
+No one else seems to hear it. Against the advice of Marty, Dana reads the Latin and somewhere outside, the family from the diary returns from their graves all zombie-fied. 
+</p>
+<button class="button" onclick="location.href='TheCabinChapter2Scene2.html'">Previous Scene</button>
+<button class="button" onclick="location.href='TheCabinChapter2Scene4.html'">Next Scene</button>
+<img id="basement" alt="basement" src="basement.jpg" width="640" height="480">
+<br>
+<img id="chapter2scene3" src="chapter2scene3.png"/>
+
+</body>
+</html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="ISO-8859-1">
+<title>The Cabin</title>
+
+<style type="text/css">
+canvas{
+border-width: 2px;
+border-style:solid;
+}
+img{
+display: none;
+}
+
+h1 {
+    margin-top: 0;
+    margin-bottom: 0;
+}
+
+p{
+text-align: inherit;
+font-family: Georgia;
+font-size: 16px;
+}
+
+
+html {
+padding:0; 
+margin:0; 
+border:5px dashed gray;
+}
+
+body {
+height:100%; 
+padding:0; 
+margin:0; 
+border:0;
+border-width: 5px;
+border-style: double;
+border-color: Black;
+background-color: rgb(205,133,63);
+}
+</style>
+
+<script type ="text/javascript">
+
+var vcancas,vcon,vimg1; var cx=0; var stopanim;
+function loadani(){
+    vcanvas=document.getElementById("canvas");
+	vcon=vcanvas.getContext("2d");
+	vimg1=document.getElementById("chapter5scene1");
+	vcon.drawImage(vimg1,cx,0,640,480,0,0,640,480);
+	if (stopanim!= null) clearInterval(stopanim);		
+	stopanim = setInterval("animate()",3000);
+}
+var counter=0; var delay=0;
+function animate(){
+	if(counter<=5) counter++; else counter=0;
+    cx=counter*640;
+    vcon.drawImage(vimg1,cx,0,640,480,0,0,640,480);
+    if (counter>=6) clearInterval(stopanim);
+}
+
+</script>
+
+</head>
+
+<body onload="loadani()">
+<div align="center">
+<h1>The Cabin</h1>
+<h2>Chapter 5 - THE TRUTH</h2>
+<h3>Scene 1 - MARTY SAVING DANA</h3>
+
+<img id="chapter5scene1" src="chapter5scene1.png"/>
+
+	<canvas id="canvas" width ="640" height="480">
+	"This is not supported by this browser"
+	</canvas>
+	<p>
+	zombie falls into the water. He grabs Dana and they start running into the woods. The zombies are after them. He jumps into one of the graves the zombies came out of and starts digging. 
+	Dana can't figure out what's going on. Suddenly, Marty opens a door and they fall into a room right before the zombies grab them.
+	</p>
+	
+<button class="button" onclick="location.href='TheCabinChapter4Scene4.html'">Previous Scene</button>
+<button class="button" onclick="location.href='TheCabinChapter5Scene2.html'">Next Scene</button>
+
+</div>
+
+
+<br>
+<br>
+</body>
+</html>
